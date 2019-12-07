@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">  
+ 
+               <!-- **** Example 1 , Example 2 **** -->
+      <bean id="studentbean" class="com.Spring.Example1.Student">
+      <property name="name" value="Rajat Singh Thakur"></property>
+      </bean>
+      
+               <!-- **** Example 3 **** -->
+      <bean id="employee" class="com.Spring.Example3.Employee">
+      <constructor-arg value="100" type="int" ></constructor-arg>
+      <constructor-arg value="Rajat"></constructor-arg>
+      <constructor-arg value="Indore"></constructor-arg>
+      </bean>
+      
+               <!-- **** Example 4 **** -->
+      <bean id="employee1" class="com.Spring.Example4.Employee">
+      <property name="id"><value>1001</value></property>
+      <property name="name"><value>Rajat Thakur</value></property>
+      <property name="address"><value>Indore</value></property>
+      </bean>
+      
+      
+             <!-- **** Example 5 **** --> 
+      <bean id="address" class="com.Spring.Example5.Address">
+      <constructor-arg value="indore"></constructor-arg>
+      <constructor-arg value="Madhya pradesh"></constructor-arg>
+      <constructor-arg value="India"></constructor-arg>
+      </bean>
+      
+      <bean id="student1" class="com.Spring.Example5.Student">
+      <constructor-arg value="100001" type="int"></constructor-arg>
+      <constructor-arg value="Rajat Sing Thakur"></constructor-arg>
+      <constructor-arg> <ref bean="address"/> </constructor-arg>  
+      </bean>
+      
+      
+              <!-- **** Example 6 **** -->
+       <bean id="question" class="com.Spring.Example6.Question">
+       <constructor-arg value="1" type="int"></constructor-arg>
+       <constructor-arg value="Name Programming Languages?"></constructor-arg>
+       <constructor-arg><list>
+       <value>JavaScript</value>
+       <value>Python</value>
+       <value>Java</value>
+       <value>C/CPP</value>
+       <value>PHP</value>
+       <value>Swift</value>
+       <value>Ruby</value>
+       </list></constructor-arg>
+       </bean>   
+       
+       
+       <bean id="question1" class="com.Spring.Example7.Question">
+        <constructor-arg value="1" type="int"></constructor-arg>
+        <constructor-arg value="What is Java?"></constructor-arg>
+        <constructor-arg><list>
+        <ref bean="answer1"></ref>
+        <ref bean="answer2"></ref>
+        </list></constructor-arg>
+       </bean>
+       
+       <bean id="answer1" class="com.Spring.Example7.Answer">
+        <constructor-arg value="1" type="int"></constructor-arg>
+        <constructor-arg value="Java is Programming Language"></constructor-arg>
+        <constructor-arg value="Ankit"></constructor-arg>
+       </bean>  
+       
+       <bean id="answer2" class="com.Spring.Example7.Answer">
+       <constructor-arg value="2" type="int"></constructor-arg>
+       <constructor-arg value="Java is a city"></constructor-arg>
+       <constructor-arg value="Rajat"></constructor-arg>
+       </bean>       
+      
+      </beans>
