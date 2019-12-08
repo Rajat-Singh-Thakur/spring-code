@@ -75,6 +75,18 @@
        <constructor-arg value="2" type="int"></constructor-arg>
        <constructor-arg value="Java is a city"></constructor-arg>
        <constructor-arg value="Rajat"></constructor-arg>
-       </bean>       
+       </bean>  
+       
+       
+       <bean id="studentmap" class="com.Spring.Example8.Student">
+       <constructor-arg value="10" type="int"></constructor-arg>
+       <constructor-arg value="What is Aartek ?"></constructor-arg>
+       <constructor-arg>
+       <map>
+       <entry key="Aartek is company." value="Rajat"></entry>
+       <entry key="Aartek is an organization." value="Ankit"></entry>
+       </map>
+       </constructor-arg>
+       </bean>     
       
       </beans>
