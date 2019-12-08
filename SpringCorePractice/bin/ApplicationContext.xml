@@ -55,7 +55,7 @@
        </list></constructor-arg>
        </bean>   
        
-       
+                  <!-- **** Example 7 **** -->
        <bean id="question1" class="com.Spring.Example7.Question">
         <constructor-arg value="1" type="int"></constructor-arg>
         <constructor-arg value="What is Java?"></constructor-arg>
@@ -77,7 +77,7 @@
        <constructor-arg value="Rajat"></constructor-arg>
        </bean>  
        
-       
+                  <!-- **** Example 8 **** -->
        <bean id="studentmap" class="com.Spring.Example8.Student">
        <constructor-arg value="10" type="int"></constructor-arg>
        <constructor-arg value="What is Aartek ?"></constructor-arg>
@@ -87,6 +87,41 @@
        <entry key="Aartek is an organization." value="Ankit"></entry>
        </map>
        </constructor-arg>
-       </bean>     
-      
+       </bean>  
+       
+       <!-- **** Example 9 **** -->   
+       <bean id="questionmap" class="com.Spring.Example9.Question">
+       <constructor-arg value="101" type="int"></constructor-arg>
+       <constructor-arg value="What is Computer ?"></constructor-arg>
+       <constructor-arg><map>
+       <entry key-ref="answermap1" value-ref="user1"></entry>
+       <entry key-ref="answermap2" value-ref="user2"></entry>
+       </map>
+       </constructor-arg>
+       </bean>
+       
+       <bean id="answermap1" class="com.Spring.Example9.Answer">
+       <constructor-arg value="1" type="int"></constructor-arg>
+       <constructor-arg value="I don't know."></constructor-arg>
+       <constructor-arg value="08/12/2019"></constructor-arg>
+       </bean>
+       
+       <bean id="answermap2" class="com.Spring.Example9.Answer">
+       <constructor-arg value="2" type="int"></constructor-arg>
+       <constructor-arg value="Computer is a machine."></constructor-arg>
+       <constructor-arg value="09/12/2019"></constructor-arg>
+       </bean>
+       
+       <bean id="user1" class="com.Spring.Example9.User">
+       <constructor-arg value="1" type="int"></constructor-arg>
+       <constructor-arg value="Rajat"></constructor-arg>
+       <constructor-arg value="rajatthakur164@gmail.com"></constructor-arg>
+       </bean>
+       
+       <bean id="user2" class="com.Spring.Example9.User">
+       <constructor-arg value="2" type="int"></constructor-arg>
+       <constructor-arg value="Ankit"></constructor-arg>
+       <constructor-arg value="rajatthakur1644@gmail.com"></constructor-arg>
+       </bean>
+       
       </beans>
