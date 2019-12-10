@@ -89,7 +89,7 @@
        </constructor-arg>
        </bean>  
        
-       <!-- **** Example 9 **** -->   
+                 <!-- **** Example 9 **** -->   
        <bean id="questionmap" class="com.Spring.Example9.Question">
        <constructor-arg value="101" type="int"></constructor-arg>
        <constructor-arg value="What is Computer ?"></constructor-arg>
@@ -122,6 +122,22 @@
        <constructor-arg value="2" type="int"></constructor-arg>
        <constructor-arg value="Ankit"></constructor-arg>
        <constructor-arg value="rajatthakur1644@gmail.com"></constructor-arg>
+       </bean>
+       
+
+                <!-- **** Example 10 **** -->   
+       <bean id="emp1" class="com.Spring.Example10.Employee">
+       <constructor-arg value="1001" type="int"></constructor-arg>
+       <constructor-arg value="rajat"></constructor-arg>
+       <constructor-arg value="rajatthakur.aartek.in"></constructor-arg>
+       </bean>
+       
+       <bean id="dep" class="com.Spring.Example10.Department">
+       <constructor-arg value="Bhopal"></constructor-arg>
+       </bean>
+       
+       <bean id="emp2" class="com.Spring.Example10.Employee" parent="emp1">
+       <constructor-arg ref="dep"></constructor-arg>        
        </bean>
        
       </beans>
