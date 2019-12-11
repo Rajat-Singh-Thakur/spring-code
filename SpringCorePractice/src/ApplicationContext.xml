@@ -140,4 +140,11 @@
        <constructor-arg ref="dep"></constructor-arg>        
        </bean>
        
+                  <!-- **** Example 11 **** -->   
+       <bean id="employee11" class="com.Spring.Example11.Employee">
+       <property name="id"><value>10</value></property>
+       <property name="name"><value>Rajat</value></property>
+       <property name="email"><value>rajatthakur1644@gmail.com</value></property>
+        </bean>
+       
       </beans>
