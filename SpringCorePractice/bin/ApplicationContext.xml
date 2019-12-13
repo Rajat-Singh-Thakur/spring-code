@@ -147,4 +147,30 @@
        <property name="email"><value>rajatthakur1644@gmail.com</value></property>
         </bean>
        
+                 <!-- **** Example 12 **** -->   
+       <bean id="SIstud" class="DependentObject.Student">
+       <property name="id" value="101"></property>
+       <property name="name" value="RAJAT"></property>
+       <property name="email" value="rajat164@"></property>
+       <property name="address" ref="SIaddress"></property>
+       </bean>
+       
+       <bean id="SIaddress" class="DependentObject.Address">
+       <property name="city" value="BHOPAL"></property>
+       <property name="state" value="M.P"></property>
+       <property name="country" value="INDIA"></property>
+       </bean>
+       
+       <bean id="SIcollectionlist" class="CollectionList.Question">
+       <property name="id" value="1"></property>
+       <property name="question" value="How win last match?"></property>
+       <property name="answer">
+       <list>
+       <value>IND</value>
+       <value>PAK</value>
+       <value>WI</value>
+       <value>AUS</value>
+       </list>       
+       </property>
+       </bean>
       </beans>
