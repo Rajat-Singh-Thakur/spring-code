@@ -173,4 +173,42 @@
        </list>       
        </property>
        </bean>
+       
+               <!-- **** Example 13 **** --> 
+       <bean id="SIanswer1" class="CollectionList1.Answer">
+       <property name="answer" value="A"></property>
+       <property name="answerby" value="Rajat"></property>
+       <property name="answerdate" value="13/12/2019"></property>
+       </bean>
+       
+       <bean id="SIanswer2" class="CollectionList1.Answer">
+       <property name="answer" value="B"></property>
+       <property name="answerby" value="Ankit"></property>
+       <property name="answerdate" value="18/12/2019"></property>
+       </bean>
+       
+       <bean id="SIquestion" class="CollectionList1.Question">
+       <property name="id" value="1"></property>
+       <property name="question" value="Choose any one from option A and B"></property>
+       <property name="answer">
+       <list>
+       <ref bean="SIanswer1"/>
+       <ref bean="SIanswer2"/>
+       </list>
+       </property>
+       </bean>
+       
+                       <!-- **** Example 14 **** --> 
+       <bean id="Mapanswer1" class="CollectionMap.Question">
+       <property name="id" value="1"></property>
+       <property name="question" value="Total number of countrys in World?"></property>
+       <property name="answer">
+       <map>
+       <entry key="212" value="Rajat"/>
+       <entry key="211" value="Ankit"/>
+       <entry key="210" value="Vijay"/>
+       </map>
+       </property>
+       </bean>
+       
       </beans>
