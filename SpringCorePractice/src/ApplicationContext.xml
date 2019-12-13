@@ -211,4 +211,33 @@
        </property>
        </bean>
        
+       
+       <bean id="map1answer1" class="CollectionMap1.Answer">
+       <property name="answer" value="Rajat"></property>
+       <property name="answerdate" value="13/12/2019"></property>
+       </bean>
+       
+       <bean id="map1answer2" class="CollectionMap1.Answer">
+       <property name="answer" value="Ankit"></property>
+       <property name="answerdate" value="13/12/2019"></property>
+       </bean>
+       
+       <bean id="map1user1" class="CollectionMap1.User">
+       <property name="name" value="Rajat sing thakur"></property>
+       </bean>
+       
+       <bean id="map1user2" class="CollectionMap1.User">
+       <property name="name" value="Ankit rajpoot"></property>
+       </bean>
+       
+       <bean id="map1ques" class="CollectionMap1.Question">
+       <property name="id" value="1"></property>
+       <property name="question" value="Your Nick Name."></property>
+       <property name="answer">
+       <map>
+       <entry key-ref="map1answer1" value-ref="map1user1"></entry>
+       <entry key-ref="map1answer2" value-ref="map1user2"></entry>
+       </map>
+       </property>
+       </bean>
       </beans>
